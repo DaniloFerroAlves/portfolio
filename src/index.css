@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Sora", sans-serif;
+    font-style: normal
+}
+
+.btn {
+    background-color: #1f2937;
+    padding: 4px 8px;
+    color: #e5e7eb;
+    border-radius: 5%;
+    transition: all .5s;
+
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: #881337;
+    font-weight: 700;
+}
+
+.active {
+   color: white;
+}
+
+.navbar ul li a {
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Posiciona o pseudo-elemento abaixo do texto do link */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Altura da linha */
+    background-color: #881337; /* Cor da linha */
+    border-radius: 50%; /* Bordas arredondadas para criar o efeito de onda */
+    transform-origin: center bottom; /* Define o ponto de origem da transformação */
+    transform: scaleX(0); /* Inicialmente, a linha estará invisível */
+    transition: transform 0.3s ease; /* Transição suave para o efeito */
+}
+
+.navbar ul li a:hover::after {
+    transform: scaleX(1); /* Quando o link é hover, a linha se expande */
+}
+
+
+
+/* Animação para criar um efeito de onda */
+@keyframes wave {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1.5);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
