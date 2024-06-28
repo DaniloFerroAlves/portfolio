@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full top-0 navbar sticky backdrop-blur-sm z-50">
-      {isVisible ? (<div className="absolute bg-black/50 h-screen w-screen -z-10" onClick={() => setIsVisible(!isVisible)}/>) : ""}
+      {isVisible ? (<div className="absolute bg-black/65 h-screen w-screen -z-10" onClick={() => setIsVisible(!isVisible)}/>) : ""}
       <div className="md:flex justify-between md:w-4/6 items-center m-auto py-4 w-10/12">
         <div className="flex justify-between">
           <NavLink
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={`flex md:flex-row flex-col gap-6 md:items-center md:static absolute md:top-0 md:opacity-100 top-[56px] md:p-0 py-5 px-4  md:w-fit left-[15px] transition-all  duration-500 ease-in-out ${
+          className={`flex md:flex-row flex-col gap-6 md:items-center md:static absolute md:top-0 md:opacity-100 top-[56px] md:p-0 py-5 px-4  md:w-fit right-0 transition-all  duration-500 ease-in-out ${
             isVisible ? "top-[56px] opacity-100" : "-top-60 opacity-0"
           }`}
         >
@@ -52,7 +52,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
-          <a href="./src/assets/curriculo/Curriculo_Danilo_Ferro_Alves.pdf" className="btn  flex items-center gap-2 " download>Resumo <BiDownload/></a>
+          <a href="/curriculo/Curriculo_Danilo_Ferro_Alves.pdf" className="btn  flex items-center gap-2 " download>Resumo <BiDownload/></a>
         </ul>
       </div>
     </nav>
